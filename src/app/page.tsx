@@ -25,8 +25,8 @@ export default function Home() {
   }, []);
 
   return (
-    <Container>
-      <Typography variant="h1">Hello World</Typography>
+    <Container maxWidth="md">
+      <Typography variant="h1">Books Application</Typography>
       {isLoading && <Typography>Loading...</Typography>}
       {booksData &&
         booksData.map((book) => {

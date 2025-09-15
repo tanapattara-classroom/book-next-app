@@ -1,6 +1,6 @@
 "use client";
 import { Book } from "@/types/book";
-import { Box, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 export default function page() {
@@ -23,13 +23,13 @@ export default function page() {
   }, [id]);
 
   return (
-    <Box p={2}>
+    <Container maxWidth="md">
       {book && (
         <Box>
           <Typography variant="h2">{book.title}</Typography>
           <Typography variant="body1">{book.description}</Typography>
         </Box>
       )}
-    </Box>
+    </Container>
   );
 }
